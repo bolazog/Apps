@@ -71,6 +71,8 @@ class ViewController: UIViewController {
     }
   }
   
+  // MARK: KeyboardAdjust
+  
   func adjustForKeyboard(notification: Notification) {
     let userInfo = notification.userInfo!
     

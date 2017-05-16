@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MCSessionDelegate, MCBrowserViewControllerDelegate {
+class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   var images = [UIImage]()
   var mcSession: MCSession!
@@ -96,7 +96,9 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     present(mcBrowser, animated: true)
   }
-  
+}
+
+extension ViewController: MCSessionDelegate, MCBrowserViewControllerDelegate {
   func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
     if let image = UIImage(data: data) {
       DispatchQueue.main.async { [unowned self] in
@@ -105,8 +107,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
       }
     }
   }
-  
-  // Optional Methods
   
   func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
     switch state {
@@ -118,6 +118,8 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
       print("Not Connected: \(peerID.displayName)")
     }
   }
+  
+  // Optional
   
   func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
     dismiss(animated: true)
@@ -138,7 +140,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
   func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
     
   }
-
 
 }
 
