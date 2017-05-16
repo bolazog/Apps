@@ -58,10 +58,8 @@
 		E3D463A31EA2806800D49AC1 /* SecretSwift */ = {
 			isa = PBXGroup;
 			children = (
-				E3D463A61EA2806800D49AC1 /* ViewController.swift */,
-				E3D463A81EA2806800D49AC1 /* Main.storyboard */,
-				E3D463B71EA2A85E00D49AC1 /* KeychainOptions.swift */,
-				E3D463B81EA2A85E00D49AC1 /* KeychainWrapper.swift */,
+				E3DD8DCC1ECB2EE20027CA94 /* Utils */,
+				E3DD8DCD1ECB2EF00027CA94 /* Controllers */,
 				E3D463B61EA2807200D49AC1 /* Supporting Files */,
 			);
 			path = SecretSwift;
@@ -70,12 +68,30 @@
 		E3D463B61EA2807200D49AC1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E3D463A81EA2806800D49AC1 /* Main.storyboard */,
 				E3D463A41EA2806800D49AC1 /* AppDelegate.swift */,
 				E3D463AB1EA2806800D49AC1 /* Assets.xcassets */,
 				E3D463AD1EA2806800D49AC1 /* LaunchScreen.storyboard */,
 				E3D463B01EA2806800D49AC1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3DD8DCC1ECB2EE20027CA94 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3D463B71EA2A85E00D49AC1 /* KeychainOptions.swift */,
+				E3D463B81EA2A85E00D49AC1 /* KeychainWrapper.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		E3DD8DCD1ECB2EF00027CA94 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3D463A61EA2806800D49AC1 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +334,7 @@
 				E3D463B51EA2806800D49AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

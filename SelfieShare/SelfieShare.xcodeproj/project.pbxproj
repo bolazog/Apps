@@ -54,8 +54,7 @@
 		E3DA81271EA8B7FD004786FD /* SelfieShare */ = {
 			isa = PBXGroup;
 			children = (
-				E3DA812A1EA8B7FD004786FD /* ViewController.swift */,
-				E3DA812C1EA8B7FD004786FD /* Main.storyboard */,
+				E3DD8DCE1ECB2F450027CA94 /* Controllers */,
 				E3DA813A1EA8B806004786FD /* Supporting Files */,
 			);
 			path = SelfieShare;
@@ -64,12 +63,21 @@
 		E3DA813A1EA8B806004786FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E3DA812C1EA8B7FD004786FD /* Main.storyboard */,
 				E3DA81281EA8B7FD004786FD /* AppDelegate.swift */,
 				E3DA812F1EA8B7FD004786FD /* Assets.xcassets */,
 				E3DA81311EA8B7FD004786FD /* LaunchScreen.storyboard */,
 				E3DA81341EA8B7FD004786FD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3DD8DCE1ECB2F450027CA94 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3DA812A1EA8B7FD004786FD /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +318,7 @@
 				E3DA81391EA8B7FD004786FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
