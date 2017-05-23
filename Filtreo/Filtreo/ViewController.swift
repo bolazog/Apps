@@ -45,6 +45,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    intensity.isEnabled = false
     
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
     
@@ -125,6 +126,7 @@ extension ViewController: UIImagePickerControllerDelegate {
     let beginImage = CIImage(image: currentImage)
     currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
     
+    intensity.isEnabled = true
     applyProcessing()
   }
   
